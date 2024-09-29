@@ -1,12 +1,28 @@
  <!DOCTYPE html>
  <html lang="en">
  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memory Game</title>
-    <link rel="stylesheet" href="style.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Memory Game</title>
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   <link rel="stylesheet" href="style.css">
  </head>
  <body>
-    <script src="script.js"></script>
+   <div class="game-container">
+      <h1>4x4記憶力大考驗</h1>
+      <div id="countdown" style="display:none;"></div>
+      <div id="timer" style="display:none;">時間：0秒</div>
+      <div id="theme-selection">
+          <h2>選擇主題</h2>
+          <div class="theme-buttons" id="theme-buttons"></div>
+      </div>
+      <button id="start-button" style="display:none;">開始遊戲</button>
+      <div class="game-board" id="game-board"></div>
+      <div id="game-controls" style="display:none;">
+          <button id="reset-button">重置遊戲</button>
+          <button id="change-theme-button">重新選擇主題</button>
+      </div>
+  </div>
+   <script src="script.js"></script>
  </body>
  </html>
