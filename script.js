@@ -11,27 +11,27 @@ const themes = {
     animals: {
         name: "動物",
         images: [
-            '/imgs/animals/animal1.png',
-            '/imgs/animals/animal2.png',
-            '/imgs/animals/animal3.png',
-            '/imgs/animals/animal4.png',
-            '/imgs/animals/animal5.png',
-            '/imgs/animals/animal6.png',
-            '/imgs/animals/animal7.png',
-            '/imgs/animals/animal8.png'
+            'imgs/animals/animal1.png',
+            'imgs/animals/animal2.png',
+            'imgs/animals/animal3.png',
+            'imgs/animals/animal4.png',
+            'imgs/animals/animal5.png',
+            'imgs/animals/animal6.png',
+            'imgs/animals/animal7.png',
+            'imgs/animals/animal8.png'
         ]
     },
     foods: {
         name: "食物",
         images: [
-            '/imgs/foods/food1.png',
-            '/imgs/foods/food2.png',
-            '/imgs/foods/food3.png',
-            '/imgs/foods/food4.png',
-            '/imgs/foods/food5.png',
-            '/imgs/foods/food6.png',
-            '/imgs/foods/food7.png',
-            '/imgs/foods/food8.png'
+            'imgs/foods/food1.png',
+            'imgs/foods/food2.png',
+            'imgs/foods/food3.png',
+            'imgs/foods/food4.png',
+            'imgs/foods/food5.png',
+            'imgs/foods/food6.png',
+            'imgs/foods/food7.png',
+            'imgs/foods/food8.png'
         ]
     }
 };
