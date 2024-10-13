@@ -110,7 +110,7 @@ button:hover {
     border-radius: 10px;
     margin-bottom: 5px;
 }
-#countdown, #timer {
+#countdown, #timer, #fliper {
     font-size: 24px;
     font-weight: bold;
     color: #333;
