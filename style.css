@@ -3,22 +3,35 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
 }
 .game-container {
     text-align: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    position: relative;
 }
 .game-board {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    margin-top: 20px;
+    margin: 20px auto;
+    justify-content: center;
+    width: 100%;
+}
+.game-board.grid-2x2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+.game-board.grid-4x4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+.game-board.grid-6x6 {
+    grid-template-columns: repeat(6, 1fr);
 }
 .card {
-    width: 100px;
-    height: 100px;
+    aspect-ratio: 1 / 1;
     position: relative;
     perspective: 1000px;
     cursor: pointer;
@@ -55,11 +68,27 @@ body {
 .card img {
     max-width: 90%;
     max-height: 90%;
+    object-fit: contain;
 }
 button {
     font-size: 18px;
     padding: 10px 20px;
     margin: 10px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #45a049;
+}
+#clear-leaderboard {
+    background-color: #f44336;
+}
+#clear-leaderboard:hover {
+    background-color: #d32f2f;
 }
 .theme-buttons {
     display: flex;
@@ -86,4 +115,103 @@ button {
     font-weight: bold;
     color: #333;
     margin: 10px 0;
+}
+.mode-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.mode-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+.mode-button:hover {
+    background-color: #2980b9;
+}
+.mode-button.selected {
+    background-color: #1c638e;
+    transform: scale(1.05);
+}
+#start-button {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#start-button:hover {
+    background-color: #1976D2;
+}
+#leaderboard-button {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 24px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#back-button {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 24px;
+    font-size: 18px;
+    color: white;
+    background-color: #f44336;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#back-button:hover {
+    background-color: #d32f2f;
+}
+.sound-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.sound-toggle:hover {
+    background-color: #45a049;
+}
+.sound-toggle.off {
+    background-color: #ccc;
+}
+.sound-toggle.off:hover {
+    background-color: #bbb;
+}
+@media (max-width: 600px) {
+    .game-board.grid-2x2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .game-board.grid-4x4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .game-board.grid-6x6 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .card {
+        font-size: 14px;
+    }
 }
