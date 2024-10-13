@@ -40,7 +40,7 @@ const GAME_MODES = {
     '6x6': { gridSize: 6, cardCount: 36 }
 };
 
-const IS_DEVELOPMENT_MODE = true;
+const IS_DEVELOPMENT_MODE = false;
 
 class MemoryGame {
     constructor() {
